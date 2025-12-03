@@ -1,0 +1,8 @@
+@import "tailwindcss";
+
+@theme {
+  --color-galerie-green: #a5c356;
+  --color-galerie-blue: #3551a5;
+  --color-galerie-brown: #602c05;
+  --color-galerie-cream: #f8ffe7;
+}
