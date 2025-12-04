@@ -1,4 +1,12 @@
 function Hero() {
+
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section id="hero" className="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-galerie-cream via-galerie-green/20 to-galerie-blue/30 overflow-hidden">
       {/* Elementos decorativos de fondo */}
@@ -23,10 +31,14 @@ function Hero() {
         </p>
 
         <div className="flex gap-4 justify-center flex-wrap">
-          <button className="bg-galerie-green hover:bg-galerie-green/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
+          <button 
+            onClick={() => scrollToSection('menu')}
+            className="bg-galerie-green hover:bg-galerie-green/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
             Ver Menú
           </button>
-          <button className="bg-galerie-blue hover:bg-galerie-blue/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
+          <button 
+            onClick={() => scrollToSection('gallery')}
+            className="bg-galerie-blue hover:bg-galerie-blue/90 text-white px-8 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
             Conoce Nuestro Arte
           </button>
         </div>

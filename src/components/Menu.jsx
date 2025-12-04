@@ -258,7 +258,7 @@ function Menu() {
           
           {/* Botón de descarga */}
           <a
-            href="/menu.pdf"
+            href="docs/PDF/Newmenu.pdf"
             download="Menu-Galerie-Coffee.pdf"
             className="inline-flex items-center gap-2 bg-galerie-blue hover:bg-galerie-blue/90 text-white px-6 py-3 rounded-full font-semibold transition-all transform hover:scale-105 shadow-lg"
           >

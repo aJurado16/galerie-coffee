@@ -46,6 +46,13 @@ function Gallery() {
     setIsOpen(true)
   }
 
+  const scrollToSection = (sectionId) => {
+    const element = document.getElementById(sectionId)
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' })
+    }
+  }
+
   return (
     <section id="gallery" className="py-20 px-4 bg-white">
       <div className="max-w-6xl mx-auto">
@@ -111,7 +118,9 @@ function Gallery() {
           <p className="text-lg text-gray-700 mb-6">
             ¿Listo para crear tu obra maestra mientras disfrutas un delicioso café?
           </p>
-          <button className="bg-galerie-blue hover:bg-galerie-blue/90 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
+          <button 
+            onClick={() => scrollToSection('contact')}
+            className="bg-galerie-blue hover:bg-galerie-blue/90 text-white px-10 py-4 rounded-full text-lg font-semibold transition-all transform hover:scale-105 shadow-lg">
             Visítanos Hoy
           </button>
         </div>
