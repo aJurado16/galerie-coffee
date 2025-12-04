@@ -79,6 +79,7 @@ function Gallery() {
               <img 
                 src={item.src} 
                 alt={item.title}
+                loading="lazy"
                 className="w-full h-full object-cover"
                 />
 
